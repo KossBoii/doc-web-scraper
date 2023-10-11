@@ -6,18 +6,18 @@
 
 #### 1. Setup Chrome and Chromedriver
 ```bash
-    ./scripts/install-selenium.sh
+./scripts/install-selenium.sh
 ```
 
 #### 2. Create conda environment
 ```bash
-    conda create -n web_scraper python=3.8
-    conda activate web_scaper
+conda create -n web_scraper python=3.8
+conda activate web_scaper
 ```
 
 #### 3. Install all required packages
 ```bash
-    pip3 install -r ./src/requirements.txt
+pip3 install -r ./src/requirements.txt
 ```
 
 #### 4. Create Google service account and download credential.json
@@ -29,8 +29,8 @@
 
 Replace correct Google Sheet ID where it says something like this:
 ```python
-    # Google Sheet
-    sheet_id = "....."  # PLACE_HERE
+# Google Sheet
+sheet_id = "....."  # PLACE_HERE
 ```
 
 #### 6. Package to complete application
@@ -38,10 +38,10 @@ Replace correct Google Sheet ID where it says something like this:
 Run the following command to package app to executable. The executable will be available in `./dist/web_crawler`
 
 ```bash
-    pyinstaller web_crawler.spec
+pyinstaller web_crawler.spec
 ```
 
 #### 7. Run and enjoy the executable
 ```bash
-    ./dist/web_crawler
+./dist/web_crawler
 ```
