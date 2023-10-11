@@ -1,0 +1,6 @@
+__pycache__
+credential.json
+
+build/*
+*.spec
+dist/*
