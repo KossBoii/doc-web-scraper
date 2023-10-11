@@ -35,7 +35,7 @@ class WebScraper:
         self.g_drive_service = GoogleDriveService()
         self.folder_id = self.g_drive_service.get_folder_id_by_name(
             "test-web-crawler")
-        self.g_sheet_service = GoogleSheetService()
+        self.g_sheet_service = GoogleSheetService(self.cfg)
 
     def handle(self):
         new_datas = []

@@ -24,6 +24,9 @@ class Settings(BaseSettings):
     start_date = datetime.strptime(f"31/12/{datetime.now().year-1}", 
                                     date_time_format)
     
+    # Google Sheet
+    sheet_id = "1mFV1Rfq0g2eLr3W2L9lv4-eT6Vd3cetnzN06Dn3RsSI"   # PLACE_HERE
+    
     
 @lru_cache
 def get_settings() -> Settings:

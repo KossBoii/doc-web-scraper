@@ -5,3 +5,4 @@ requests
 selenium
 pydantic==1.9.1
 pandas
+pyinstaller

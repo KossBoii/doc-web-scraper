@@ -7,12 +7,13 @@ from googleapiclient.discovery import build
 
 
 class GoogleSheetService:
-    def __init__(self):
+    def __init__(self, cfg):
         self._scopes=['https://www.googleapis.com/auth/spreadsheets']
-
+        self.cfg = cfg
+        
         _base_path = os.path.dirname(__file__)
         self._credential_path = os.path.join(_base_path, 'credential.json')
-        self._sheet_id = "1mFV1Rfq0g2eLr3W2L9lv4-eT6Vd3cetnzN06Dn3RsSI"
+        self._sheet_id = cfg.sheet_id
         self.cur_year = datetime.now().year
         self._sheet_name = f"Công văn đi {self.cur_year}"
         
